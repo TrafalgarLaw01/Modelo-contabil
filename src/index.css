@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-navy: #000000;
+  --color-brand-blue: #0070F3;
+  --color-brand-accent: #acc4cf;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black antialiased selection:bg-black selection:text-white;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Reference-style Lines */
+.index-line {
+  position: relative;
+  height: 1px;
+  background: #000;
+  width: 100%;
+}
+
+.index-line-muted {
+  background: #acc4cf;
+}
+
+/* Typography matching reference */
+.hd-1 {
+  font-size: clamp(4rem, 15vw, 19rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+}
+
+.hd-3 {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.pm-m {
+  font-size: 1.4rem;
+  line-height: 1.55;
+}
+
+/* Reference-style Buttons */
+.btn-rounded {
+  @apply inline-flex items-center justify-center px-8 py-4 rounded-full border border-black transition-all duration-500;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.btn-black {
+  @apply bg-black text-white hover:bg-transparent hover:text-black;
+}
+
+.btn-white {
+  @apply bg-white text-black hover:bg-black hover:text-white;
+}
+
+/* Layout Utilities */
+.container-custom {
+  @apply max-w-[1680px] mx-auto px-6 md:px-16;
+}
+
+.section-padding {
+  @apply py-20 md:py-32;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Animation Utilities */
+.overflow-hidden-clip {
+  overflow: hidden;
+}
+
+.reveal-text {
+  display: block;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Nexus Contabilidade Estratégica",
+  "description": "Escritório de contabilidade focado em crescimento empresarial, eliminando a burocracia e transformando dados em decisões inteligentes.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
